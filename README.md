@@ -15,7 +15,7 @@ DONE ✅
 
 TO-DO 🚧⏳🔄🔜
 
-- Implement the booking system in different bussiness logic way
+- Implement the booking system with more proper bussiness way
 - Add room update/create on the frontend
 - Add booking status update on the frontend
 
@@ -28,6 +28,7 @@ TO-DO 🚧⏳🔄🔜
 - **Frontend:** Angular
 - **Authentication:** JWT
 - **Version Control:** Git
+- **Design:** REST API
 
 ## 📋 Prerequisites
 
@@ -128,7 +129,7 @@ Admin Registration Page:
 Admin Manage Bookings Page:
 ![Hotel Booking App](image/admin_history_bookings.png)
 
-## Work Flow
+## Work Flow (Must Read)
 
 ### Admin
 
@@ -143,14 +144,14 @@ Only an admin can register new admin/manager of the hotel booking.
 
 #### For this reason there is another step that you should do to start using the admin page.
 
-1. Open Swagger and at the api/admin/SignUpAdmin just register the first user on you db.
+1. Open Swagger and at the api/admin/SignUpAdmin just register the first user on your db.
 
 ### Customer
 
 The customer page starts with the landing page where you can find some content of the hotel.
 http://localhost:4200/
 
-Customer has to signup and then to login.
+Customer has to signup and then login.
 He can now check his booking history.
 Book a room will be Implement asap in next update.
 
