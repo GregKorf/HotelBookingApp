@@ -78,6 +78,8 @@ It should run on port: 5002
 
 You can check the api doc at https://localhost:5002/swagger/index.html
 
+### At Swagger Page you can test all the api endpoints that my app has right now until the next update
+
 ## Frontend Setup
 
 1. Open the Frontend file into VS Code
@@ -85,36 +87,42 @@ You can check the api doc at https://localhost:5002/swagger/index.html
 2. Type npm install at the terminal
 
 ```bash
-    npm install
+npm install
 ```
 
 3. Run the Frontend
 
 ```bash
- ng serve
+ng serve
 ```
 
-It should open at port: 4002
+It should run at port: 4002
+
+## DB Schema
+
+![Hotel Booking App](image/dbschema.png)
 
 ## Customer Page
 
 Landing Page:
-image/landing.png
+![Hotel Booking App](image/landing.png)
 
 Login Page:
-image/login.png
+![Hotel Booking App](image/login.png)
 
 Singup Page:
-image/signup.png
+![Hotel Booking App](image/signup.png)
 
 Customer Booking history:
-image/history.png
+![Hotel Booking App](image/bookinghistory.png)
+
+## Admin Page
 
 Admin Landing Page:
-image/admin-landing.png
+![Hotel Booking App](image/admin-landing.png)
 
 Admin Manage Bookings Page:
-image/admin-manage-bookings.png
+![Hotel Booking App](image/admin-manage-bookings.png)
 
 ## License
 
