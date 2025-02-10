@@ -46,7 +46,7 @@ TO-DO
 git clone https://github.com/GregKorf/HotelBookingApp.git
 ```
 
-Backend Setup
+## Backend Setup
 
 1. Navigate to the Backend file
 
@@ -78,7 +78,7 @@ It should run on port: 5002
 
 You can check the api doc at https://localhost:5002/swagger/index.html
 
-Frontend Setup
+## Frontend Setup
 
 1. Open the Frontend file into VS Code
 
@@ -96,7 +96,7 @@ Frontend Setup
 
 It should open at port: 4002
 
-Customer Page
+## Customer Page
 
 Landing Page:
 image/landing.png
@@ -115,3 +115,7 @@ image/admin-landing.png
 
 Admin Manage Bookings Page:
 image/admin-manage-bookings.png
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
