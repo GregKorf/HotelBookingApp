@@ -6,14 +6,14 @@ A web application for hotel booking management with Angular frontend and C# back
 
 ## ✨ Features
 
-DONE
+DONE ✅
 
 - 📅 View Booking History
 - 👥 User registration and authentication
 - 📝 Booking management
 - 📱 Responsive user interface
 
-TO-DO
+TO-DO 🚧⏳🔄🔜
 
 - Implement the booking system in different bussiness logic way
 - Add room update/create on the frontend
@@ -105,7 +105,8 @@ It should run at port: 4002
 ## Customer Page
 
 Landing Page:
-![Hotel Booking App](image/landing.png)
+![Hotel Booking App](image/landing_page1.png)
+![Hotel Booking App](image/landing_page2.png)
 
 Login Page:
 ![Hotel Booking App](image/login.png)
@@ -114,15 +115,44 @@ Singup Page:
 ![Hotel Booking App](image/signup.png)
 
 Customer Booking history:
-![Hotel Booking App](image/bookinghistory.png)
+![Hotel Booking App](image/booking_history.png)
 
 ## Admin Page
 
 Admin Landing Page:
-![Hotel Booking App](image/admin-landing.png)
+![Hotel Booking App](image/admin_login.png)
+
+Admin Registration Page:
+![Hotel Booking App](image/admin_register.png)
 
 Admin Manage Bookings Page:
-![Hotel Booking App](image/admin-manage-bookings.png)
+![Hotel Booking App](image/admin_history_bookings.png)
+
+## Work Flow
+
+### Admin
+
+The admin page is a totally different app from the customer page.
+
+If you want to enter the admin page u should enter this link:
+http://localhost:4200/admin/login
+
+Admin can see all the bookings and he can change the status to cancelled
+Admin can create a room and update the price of the room.
+Only an admin can register new admin/manager of the hotel booking.
+
+#### For this reason there is another step that you should do to start using the admin page.
+
+1. Open Swagger and at the api/admin/SignUpAdmin just register the first user on you db.
+
+### Customer
+
+The customer page starts with the landing page where you can find some content of the hotel.
+http://localhost:4200/
+
+Customer has to signup and then to login.
+He can now check his booking history.
+Book a room will be Implement asap in next update.
 
 ## License
 
