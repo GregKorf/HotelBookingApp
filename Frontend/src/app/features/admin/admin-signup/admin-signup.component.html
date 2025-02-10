@@ -1,0 +1,114 @@
+<app-admin-navbar-menu></app-admin-navbar-menu>
+<div class="d-flex justify-content-center mt-5">
+<h4>Admin Registration</h4>
+</div>
+@if (registrationStatus.message === "Not attempted yet"){
+    <div class="d-flex justify-content-center">
+        <div class="d-flex flex-column mt-2 w-25 ">
+            <form [formGroup]="form" class="d-flex flex-column">
+                <mat-form-field>
+                    <mat-label>Username</mat-label>
+                    <input matInput type="text" formControlName="username">
+                    @if (form.get("username")?.hasError("required")) {
+                        <mat-error>Username is a required field</mat-error>
+                      } 
+                      @if (form.get("username")?.hasError("pattern")) {
+                        <mat-error>Username can contain only letters and numbers</mat-error>
+                      }
+                </mat-form-field>
+
+                <mat-form-field>
+                    <mat-label>Email Address</mat-label>
+                    <input matInput type="text" formControlName="email">
+                    <mat-error >Email Address is required field </mat-error>
+                </mat-form-field>
+
+                <mat-form-field>
+                    <mat-label>First Name</mat-label>
+                    <input matInput type="text" formControlName="firstName">
+                    @if (form.get("firstName")?.hasError("required")) {
+                        <mat-error>First Name is a required field</mat-error>
+                      } 
+                    @if (form.get("firstName")?.hasError("pattern")) {
+                        <mat-error>First Name can contain only letters</mat-error>
+                      }
+                </mat-form-field>
+
+                <mat-form-field>
+                    <mat-label>Last Name</mat-label>
+                    <input matInput type="text" formControlName="lastName">
+                    @if (form.get("lastName")?.hasError("required")) {
+                        <mat-error>Last Name is a required field</mat-error>
+                      } 
+                    @if (form.get("lastName")?.hasError("pattern")) {
+                        <mat-error>Last Name can contain only letters</mat-error>
+                      }
+                </mat-form-field>
+
+                <mat-form-field>
+                    <mat-label>Password</mat-label>
+                    <input matInput type="password" formControlName="password">
+                    @if (form.get("password")?.hasError("required")) {
+                        <mat-error>Password is required field</mat-error>
+                      } 
+                    @if (form.get("password")?.hasError("minlength")) {
+                        <mat-error>Password must be at least 4 characters long</mat-error>
+                      }
+                    @if (form.get("password")?.hasError("pattern")) {
+                        <mat-error>Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character</mat-error>
+                      }
+                </mat-form-field>
+
+            
+
+                <mat-form-field>
+                    <mat-label>Address</mat-label>
+                    <input matInput type="text" formControlName="jobDescription">
+                    @if(form.get('jobDescription')?.hasError('required')){
+                        <mat-error>Job Description is required field</mat-error>
+                    } 
+                    @if(form.get('jobDescription')?.hasError('pattern')){
+                        <mat-error>Job Description can contain only letters</mat-error>
+                    }
+                </mat-form-field>
+
+                <mat-form-field>
+                    <mat-label>Phone Number</mat-label>
+                    <input matInput type="text" formControlName="phoneNumber">
+                    @if (form.get("phoneNumber")?.hasError("required")) {
+                        <mat-error>Phone Number is required field</mat-error>
+                      } 
+                    @if (form.get("phoneNumber")?.hasError("minlength")) {
+                        <mat-error>Phone Number must be at least 10 digits long</mat-error>
+                      }
+                    @if (form.get("phoneNumber")?.hasError("pattern")) {
+                        <mat-error>Phone Number can contain only numbers</mat-error>
+                      }
+                </mat-form-field>
+
+                <button mat-flat-button (click)="onSubmit()" [disabled]="form.invalid">
+                    Register
+                </button>
+            </form>
+
+        </div>
+    </div>
+    } @else {
+        @if ( registrationStatus.success ){
+            <div class="d-flex justify-content-center">
+                <div class="d-flex justify-content-center alert alert-success mt-2 w-50 ">
+                    <strong>Success: </strong> <span class="message-padding">{{registrationStatus.message}}</span> 
+                </div>
+            </div>
+        } @else {
+            <div class="d-flex justify-content-center">
+                <div class="d-flex justify-content-center alert alert-danger mt-2  w-50">
+                    <strong>Failure: </strong> <span class="message-padding">{{registrationStatus.message}}</span>
+                </div>
+            </div>
+        }
+        <!-- <button mat-flat-button color="primary" class="mt-2" (click)="registerAnother()" >
+            Register another user
+        </button> -->
+    }
+

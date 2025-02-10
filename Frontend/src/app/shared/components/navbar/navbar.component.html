@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="/"><img src="images/logo.jpg" alt="HotelBooking Logo"></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    @if (customer()) {
+          <div class="navbar-nav ">
+            <a routerLink="/room-booking">Book a room</a>
+            <a routerLink="/booking-history">My Bookings</a>
+            <span class="me-3 d-flex gap-2 text-light">
+              Welcome, {{customer()?.username}}
+              <mat-icon role="button" (click)="logout()">logout</mat-icon>
+            </span>
+        </div>
+        } @else{
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link"  role="button"routerLink="/signup" >Sign Up</a>
+                </li>             
+                <span class="me-3 d-flex gap-2 text-light">
+                  <a  role="button"routerLink="/login" >Login</a>
+                  <mat-icon role="button" class="icon-link-hover" routerLink="/login">
+                      login
+                    </mat-icon>
+                </span>
+          </ul>
+        </div>
+        }
+  </nav>
+  

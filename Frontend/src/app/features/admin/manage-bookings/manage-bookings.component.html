@@ -1,0 +1,40 @@
+<app-admin-navbar-menu></app-admin-navbar-menu>
+<div class="d-flex justify-content-center">
+    <section class="d-flex shadow mt-5 rounded">
+        <table mat-table [dataSource]="dataSource" matSort>
+
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Booking Number </th>
+                <td mat-cell *matCellDef="let booking"> {{booking.id}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="checkInDate">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Check-In Date </th>
+            <td mat-cell *matCellDef="let booking"> {{ booking.checkInDate ? (booking.checkInDate | date:'shortDate') : 'N/A' }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="checkOutDate">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Check-Out Date </th>
+            <td mat-cell *matCellDef="let booking"> {{ booking.checkOutDate ? (booking.checkOutDate | date:'shortDate') : 'N/A' }} </td>
+            </ng-container>
+            
+            <ng-container matColumnDef="status">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>
+                <td mat-cell *matCellDef="let booking"> {{booking.status}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="roomNumber">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Room Number </th>
+            <td mat-cell *matCellDef="let booking"> {{booking.roomNumber}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="customerName">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Customer Name </th>
+            <td mat-cell *matCellDef="let booking"> {{booking.customerName}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </section>
+</div>

@@ -1,0 +1,7 @@
+.navbar-custom {
+   background: linear-gradient(to top, #09203f 0%, #537895 100%);
+}
+.navbar-nav {
+    margin-left: auto;
+    margin-right: auto;
+}
